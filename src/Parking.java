@@ -20,7 +20,7 @@ public class Parking {
                 Car car = vaga.registerCar(plate, model, hour);
                 vaga.parkCar(car);
             } else if (answer.equals("2")) {
-                vaga.value(hour);
+                vaga.value();
             } else if (answer.equals("3")){
                 List<Car> carList = vaga.getCars();
                 for(Car car : carList){
