@@ -1,4 +1,5 @@
 import java.time.LocalDateTime;
+import java.util.Scanner;
 
 public class Car {
 
@@ -21,7 +22,8 @@ public class Car {
     }
 
     public String toString(){
-        String reslult = "Placa do carro: " + this.plate + "\n" + "Modelo: " + this.model + "\n" + "Horas: " + this.hour;
-        return reslult;
+        String result = "Placa do carro: " + this.plate + "\n" + "Modelo: " + this.model + "\n" + "Horas: " + this.hour;
+        return result;
     }
+
 }
