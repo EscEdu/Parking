@@ -36,14 +36,15 @@ public class Park {
     }
 
 
-    public void value(LocalDateTime hour) {
+    public void value() {
         System.out.println("Digite a placa do veículo: ");
         String search = scanner.nextLine();
         int i = 0;
         while (i < cars.size()){
            if (cars.get(i).equals(search)){
+               LocalDateTime enter = Car.getEntering();
                exit = LocalDateTime.now();
-               Duration between = Duration.between(hour, exit);
+               Duration between = Duration.between(enter, exit);
                bill = ((between.toHours() + 1) * 5);
                System.out.println("Valor a ser pago: R$" + bill);
                cars.remove(search);
