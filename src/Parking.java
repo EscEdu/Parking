@@ -8,7 +8,7 @@ public class Parking {
         Scanner scanner = new Scanner(System.in);
         Park vaga = new Park();
         while (true){
-            System.out.println("Olá! O que deseja fazer?");
+            System.out.println("O que deseja fazer?");
             System.out.println("1 - Entrada de carro \n2 - Saída de carro \n3 - Listar carro \n0 - sair ");
             String answer = scanner.nextLine();
             if (answer.equals("1")){

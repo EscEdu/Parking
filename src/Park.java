@@ -6,10 +6,10 @@ import java.time.Duration;
 
 public class Park {
     private int vacancies = 1;
-    private List<Car> cars;
+    protected List<Car> cars;
 
     Scanner scanner = new Scanner(System.in);
-    double bill;
+    private double bill;
     LocalDateTime exit;
 
     public Park() {
@@ -41,13 +41,13 @@ public class Park {
         String search = scanner.nextLine();
         int i = 0;
         while (i < cars.size()){
-           if (cars.get(i).equals(search)){
-               LocalDateTime enter = Car.getEntering();
+           if (cars.get(i).getPlate().equals(search)){
+               LocalDateTime enter = cars.get(i).getEntering();
                exit = LocalDateTime.now();
                Duration between = Duration.between(enter, exit);
                bill = ((between.toHours() + 1) * 5);
-               System.out.println("Valor a ser pago: R$" + bill);
-               cars.remove(search);
+               System.out.println("Valor à ser pago: R$" + bill);
+               cars.remove(i);
            } else {
                System.out.println("Placa não localizada em nosso sitema");
            }
