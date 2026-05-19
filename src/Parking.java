@@ -1,6 +1,5 @@
 import java.time.LocalDateTime;
 import java.util.Scanner;
-import java.util.ArrayList;
 import java.util.List;
 
 public class Parking {
@@ -18,7 +17,7 @@ public class Parking {
                 String plate = scanner.nextLine();
                 LocalDateTime hour = LocalDateTime.now();
                 Car car = vaga.registerCar(plate, model, hour);
-                vaga.parkCar(car);
+                if (car != null) vaga.parkCar(car);
             } else if (answer.equals("2")) {
                 vaga.value();
             } else if (answer.equals("3")){
